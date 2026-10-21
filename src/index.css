@@ -1,25 +1,30 @@
 :root {
   --bg: #ffffff;
-  --bg-soft: #f6f6f6;
-  --ink: #121212;
-  --ink-2: #3a3a3a;
-  --muted: #6e6e6e;
-  --line: #ececec;
-  --line-strong: #1a1a1a;
+  --bg-soft: #f5f6fb;
+  --ink: #14132b;
+  --ink-2: #393a52;
+  --muted: #6b6c80;
+  --line: #e9eaf3;
+  --line-strong: #3730a3;
   --pill-bg: #ffffff;
-  --pill-border: #e6e6e6;
-  --btn-dark: #161616;
+  --pill-border: #e3e4f0;
+  --accent: #4338ca;
+  --accent-2: #0d9488;
+  --accent-ink: #3730a3;
+  --accent-soft: #eef0ff;
+  --accent-glow: rgba(67, 56, 202, 0.45);
+  --btn-dark: #4338ca;
   --btn-dark-ink: #ffffff;
-  --card-grey: linear-gradient(180deg, #e2e2e2 0%, #f3f3f3 55%, #f7f7f7 100%);
+  --card-grey: linear-gradient(180deg, #e8eaff 0%, #f2f3ff 55%, #f8f9ff 100%);
   --badge-bg: #e3f8dc;
   --badge-ink: #1d7d1d;
   --badge-dot: #189a18;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.28);
-  --grad-text: linear-gradient(90deg, #6a6a6a 0%, #151515 35%, #1d1d1d 70%, #7a7a7a 100%);
-  --art-bg-1: #f4f4f4;
-  --art-bg-2: #d7d7d7;
-  --art-ink: #111111;
+  --grad-text: linear-gradient(90deg, #1e1b4b 0%, #4338ca 50%, #0d9488 100%);
+  --art-bg-1: #f2f3ff;
+  --art-bg-2: #d9dcff;
+  --art-ink: #4338ca;
 
   --tone-blue: #eaf3ff;
   --tone-blue-glow: rgba(110, 166, 255, 0.55);
@@ -41,27 +46,32 @@
 }
 
 :root[data-theme='dark'] {
-  --bg: #0d0d0d;
-  --bg-soft: #151515;
-  --ink: #f2f2f2;
-  --ink-2: #cfcfcf;
-  --muted: #9a9a9a;
-  --line: #232323;
-  --line-strong: #e8e8e8;
-  --pill-bg: #161616;
-  --pill-border: #2a2a2a;
-  --btn-dark: #f2f2f2;
-  --btn-dark-ink: #111111;
-  --card-grey: linear-gradient(180deg, #262626 0%, #1a1a1a 55%, #161616 100%);
+  --bg: #0c0c16;
+  --bg-soft: #15162a;
+  --ink: #f1f1fa;
+  --ink-2: #cfd0e4;
+  --muted: #9a9bb4;
+  --line: #23243a;
+  --line-strong: #a5b4fc;
+  --pill-bg: #14152a;
+  --pill-border: #2a2b45;
+  --accent: #818cf8;
+  --accent-2: #2dd4bf;
+  --accent-ink: #a5b4fc;
+  --accent-soft: rgba(99, 102, 241, 0.16);
+  --accent-glow: rgba(99, 102, 241, 0.5);
+  --btn-dark: #6366f1;
+  --btn-dark-ink: #ffffff;
+  --card-grey: linear-gradient(180deg, #1d1e38 0%, #17182d 55%, #131426 100%);
   --badge-bg: rgba(60, 200, 60, 0.14);
   --badge-ink: #7fe07f;
   --badge-dot: #5fd35f;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.7);
-  --grad-text: linear-gradient(90deg, #9a9a9a 0%, #f4f4f4 35%, #ececec 70%, #8f8f8f 100%);
-  --art-bg-1: #2a2a2a;
-  --art-bg-2: #121212;
-  --art-ink: #ededed;
+  --grad-text: linear-gradient(90deg, #e0e7ff 0%, #818cf8 50%, #2dd4bf 100%);
+  --art-bg-1: #23244a;
+  --art-bg-2: #121326;
+  --art-ink: #a5b4fc;
 
   --tone-blue: #121b2a;
   --tone-blue-glow: rgba(80, 140, 255, 0.35);
@@ -157,6 +167,7 @@ svg {
 }
 
 .serif {
+  color: var(--accent);
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
@@ -325,8 +336,9 @@ svg {
 }
 
 .nav-link.active {
-  color: var(--ink);
-  background: var(--bg-soft);
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  font-weight: 500;
 }
 
 .nav-home {
@@ -411,8 +423,12 @@ svg {
   color: var(--btn-dark-ink);
 }
 
+.btn-dark {
+  background-image: linear-gradient(135deg, var(--btn-dark) 0%, color-mix(in srgb, var(--btn-dark) 70%, var(--accent-2)) 100%);
+}
+
 .btn-dark:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 14px 30px -10px var(--accent-glow);
 }
 
 .btn-ghost {
@@ -443,8 +459,8 @@ svg {
 .chip {
   padding: 5px 12px;
   border-radius: 999px;
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
   font-size: 13px;
   color: var(--ink-2);
 }
@@ -488,6 +504,7 @@ svg {
   aspect-ratio: 1;
   border-radius: 30px;
   overflow: hidden;
+  box-shadow: 0 30px 60px -24px var(--accent-glow);
   background: var(--bg-soft);
 }
 
@@ -500,12 +517,12 @@ svg {
 }
 
 .photo {
-  filter: grayscale(1) contrast(1.05);
+  object-position: center 15%;
 }
 
 .hero-strips {
   position: absolute;
-  inset: 0 48% 0 0;
+  inset: 0 74% 0 0;
   display: flex;
 }
 
@@ -599,6 +616,7 @@ svg {
 
 .stack-stats strong {
   display: block;
+  color: var(--accent-ink);
   font-size: 18px;
   font-weight: 600;
 }
@@ -693,7 +711,7 @@ svg {
   height: 24px;
   margin-left: -12px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #777 0, #2a2a2a 45%, #050505 100%);
+  background: radial-gradient(circle at 35% 30%, #c7d2fe 0, #4f46e5 45%, #1e1b4b 100%);
   box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.45);
 }
 
@@ -717,14 +735,11 @@ svg {
   width: 82px;
   height: 82px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  object-fit: cover;
+  object-position: center 22%;
   background: var(--card-grey);
   border: 6px solid var(--bg);
-  box-shadow: 0 0 0 1px var(--line), var(--shadow-sm);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 40px;
+  box-shadow: 0 0 0 2px var(--accent), 0 10px 24px -8px var(--accent-glow);
 }
 
 .cta-sub {
@@ -770,7 +785,7 @@ svg {
 .role-index {
   font-family: var(--font-display);
   font-size: 15px;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .role-meta {
@@ -811,7 +826,7 @@ svg {
 }
 
 .list li::marker {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 /* ---------- Publications / projects ---------- */
@@ -990,6 +1005,28 @@ svg {
 
 .award svg {
   margin-bottom: 18px;
+  color: var(--accent);
+}
+
+/* Cycle the pastel tones so card grids don't read as one grey block */
+.grade:nth-child(4n + 1),
+.award:nth-child(4n + 1) {
+  background: var(--tone-blue);
+}
+
+.grade:nth-child(4n + 2),
+.award:nth-child(4n + 2) {
+  background: var(--tone-violet);
+}
+
+.grade:nth-child(4n + 3),
+.award:nth-child(4n + 3) {
+  background: var(--tone-green);
+}
+
+.grade:nth-child(4n + 4),
+.award:nth-child(4n + 4) {
+  background: var(--tone-amber);
 }
 
 .award .h3 {
@@ -1110,7 +1147,7 @@ svg {
 }
 
 .footer-links a:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 /* ---------- Work detail ---------- */
@@ -1125,7 +1162,7 @@ svg {
 }
 
 .back-link:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 .flip {
@@ -1165,6 +1202,7 @@ svg {
 
 .work-stats strong {
   display: block;
+  color: var(--accent-ink);
   font-family: var(--font-display);
   font-size: clamp(30px, 4vw, 44px);
   font-weight: 600;
@@ -1229,6 +1267,7 @@ svg {
 }
 
 .cv-label {
+  color: var(--accent-ink);
   position: sticky;
   top: 110px;
   align-self: start;
@@ -1409,7 +1448,6 @@ svg {
   .cta-avatar {
     width: 64px;
     height: 64px;
-    font-size: 30px;
   }
 }
 

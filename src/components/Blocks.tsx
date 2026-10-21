@@ -88,9 +88,7 @@ export function ContactCTA() {
             <br />
             Let's Talk Science.
           </h2>
-          <div className="cta-avatar" aria-hidden="true">
-            {profile.firstName[0]}
-          </div>
+          <img className="cta-avatar" src={profile.photo} alt={profile.name} />
         </div>
         <p className="muted">
           I'm always glad to hear from researchers, mentors and teams working on rare disease, genomics or accessible mental-health

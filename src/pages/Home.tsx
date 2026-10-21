@@ -32,7 +32,7 @@ function Hero() {
           </div>
         </div>
         <div className="hero-visual">
-          <Photo src="/photos/portrait.jpg" alt={profile.name} fallback={<HelixArt />} />
+          <Photo src={profile.photo} alt={profile.name} fallback={<HelixArt />} />
           <div className="hero-strips" aria-hidden="true">
             {[18, 14, 10, 7, 4, 2].map((b, i) => (
               <span key={i} style={{ backdropFilter: `blur(${b}px)`, WebkitBackdropFilter: `blur(${b}px)` }} />

@@ -43,14 +43,14 @@ export function CellsArt({ seed = 1 }: { seed?: number }) {
   })
   return (
     <svg className="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <rect width="300" height="300" fill="#141414" />
+      <rect width="300" height="300" fill="#1e1b4b" />
       {cells.map((c, i) => (
         <g key={i} opacity={c.o}>
-          <circle cx={c.x} cy={c.y} r={c.s} fill="none" stroke="#e9e9e9" strokeWidth="1.4" />
-          <circle cx={c.x + c.s * 0.15} cy={c.y - c.s * 0.1} r={c.s * 0.32} fill="#d4d4d4" opacity="0.65" />
+          <circle cx={c.x} cy={c.y} r={c.s} fill="none" stroke="#5eead4" strokeWidth="1.4" />
+          <circle cx={c.x + c.s * 0.15} cy={c.y - c.s * 0.1} r={c.s * 0.32} fill="#a5b4fc" opacity="0.65" />
         </g>
       ))}
-      <circle cx="150" cy="150" r="148" fill="none" stroke="#000" strokeWidth="60" opacity="0.55" />
+      <circle cx="150" cy="150" r="148" fill="none" stroke="#0b0a24" strokeWidth="60" opacity="0.55" />
     </svg>
   )
 }
@@ -70,7 +70,7 @@ export function ClusterArt() {
   }
   return (
     <svg className="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <rect width="300" height="300" fill="#efefef" />
+      <rect width="300" height="300" fill="#f5f6ff" />
       {clusters.map((c, ci) =>
         Array.from({ length: c.n }, (_, i) => {
           const a = rand() * Math.PI * 2
@@ -81,8 +81,8 @@ export function ClusterArt() {
               cx={c.cx + Math.cos(a) * d}
               cy={c.cy + Math.sin(a) * d}
               r={2.6}
-              fill="#111"
-              opacity={0.25 + ci * 0.2}
+              fill={['#4338ca', '#0d9488', '#db2777', '#f59e0b'][ci]}
+              opacity={0.85}
             />
           )
         }),

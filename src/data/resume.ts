@@ -6,6 +6,7 @@ export const profile = {
   graduating: '2027',
   tagline:
     'High-school researcher in computational biology and human genetics, with a published co-authored paper, research placements at IIT Bombay and IIT, and an independent genomics platform in development.',
+  photo: '/photos/portrait.jpg',
   resumePdf: '/Academic_Resume.pdf',
   languages: 'English; Spanish (DELE A2, 93%)',
   // Add an email address to show a mail link on the contact CTA
@@ -83,7 +84,7 @@ const canavan: Work = {
   when: 'Oct 2025 – Jan 2026',
   kind: 'Publication · Diagnostics',
   headline: 'Urine-Based Diagnosis of Canavan Disease',
-  tone: 'green',
+  tone: 'amber',
   stats: [
     { value: 'Pub.', label: 'Co-authored, published in ER Publications' },
     { value: 'CREST', label: 'Also submitted to the CREST Award' },
