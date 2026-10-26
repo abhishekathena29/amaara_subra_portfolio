@@ -5,7 +5,7 @@ export const profile = {
   city: 'Mumbai',
   graduating: '2027',
   tagline:
-    'High school researcher in human genetics, gene therapy and precision medicine, with independent and co-authored publications, research placements at IIT Bombay and other research laboratories, and the creator of an integrated leukodystrophy knowledge atlas connecting genetic evidence, disease mechanisms and therapeutic research.',
+    'Emerging researcher in human genetics, gene therapy, and precision medicine, with independent and co-authored publications, research placements at IIT Bombay and other research laboratories, and creator of an integrated leukodystrophy knowledge atlas connecting genetic evidence, disease mechanisms, and therapeutic research.',
   photo: '/photos/portrait.jpg',
   resumePdf: '/Academic_Resume.pdf',
   languages: 'English; Spanish (DELE A2, 93%)',
@@ -45,7 +45,7 @@ const genemap: Work = {
   tone: 'blue',
   stats: [
     { value: '35', label: 'Leukodystrophies covered with literature-based dossiers' },
-    { value: '1', label: 'Searchable platform for genetic, diagnostic and therapeutic data' },
+    { value: '~3,200', label: 'Pages of cited biomedical evidence in one searchable resource' },
   ],
   skills: 'Literature review, biomedical databases, evidence classification, platform design',
   link: { href: 'https://thegenemap.com', label: 'thegenemap.com' },
@@ -54,9 +54,12 @@ const genemap: Work = {
   meta: 'Jan 2026 – present',
   mentors: 'Louis (Oxford); Dr. Mayuri Bandekar (IIT Bombay)',
   points: [
-    'Building an interactive digital atlas of genetic leukodystrophies that consolidates fragmented genetic, molecular, diagnostic, biomarker and therapeutic data into one searchable platform',
-    'Authored literature-based dossiers on 35 leukodystrophies, including Canavan, Krabbe, metachromatic leukodystrophy, X-linked adrenoleukodystrophy, Pelizaeus–Merzbacher, vanishing white matter, Alexander, and POLR3-related leukodystrophy',
-    'Each dossier links primary literature, biomedical databases, clinical-trial records, standardized identifiers and evidence classifications across disease biology, genotype–phenotype relationships, biomarkers, diagnostics and therapeutic pipelines',
+    'Conceived and developed an interactive research atlas spanning 35 genetic leukodystrophies, integrating approximately 3,200 pages of cited biomedical evidence into a unified, searchable resource',
+    'Synthesized evidence across disease genetics, pathogenic variants, genotype–phenotype relationships, molecular and cellular mechanisms, clinical manifestations, biomarkers, diagnostic approaches and emerging therapeutic strategies',
+    'Designed a cross-disease framework for comparing disorders from molecular pathogenesis to therapeutic development, including gene-replacement therapies, clinical trials and investigational treatment pipelines',
+    'Linked primary literature, biomedical databases, standardized identifiers, clinical-trial records and source-level evidence classifications to support traceability and distinguish established findings from emerging, investigational or unresolved areas',
+    'Developed disease-specific research dossiers and an integrated evidence architecture to help researchers identify shared mechanisms, compare therapeutic approaches, formulate hypotheses and uncover research gaps',
+    "Designed the platform's information architecture and user experience around specialist-validated, evidence-linked content",
   ],
   tags: ['Leukodystrophies', 'Data curation', 'Platform'],
 }
@@ -90,16 +93,16 @@ const canavan: Work = {
   tone: 'amber',
   stats: [
     { value: 'Pub.', label: 'Co-authored, published in ER Publications' },
-    { value: 'CREST', label: 'Also submitted to the CREST Award' },
+    { value: 'CREST', label: 'Awarded the CREST Gold Award' },
   ],
   skills: 'Metabolic testing, GC-MS, Canavan disease biology',
   title: 'Co-author, Urine-Based Diagnosis of Canavan Disease',
   org: 'ER Publications · Mentor: Dr. Usha Dave',
   meta: 'Oct 2025 – Jan 2026',
   points: [
-    'Co-authored paper on urine-based diagnosis of Canavan disease, published in ER Publications',
+    'Co-authored “A Student Perspective: N-Acetylaspartate (NAA) Detection by Urine GCMS Analysis in a Rare Genetic Brain Disorder – Canavan Disease,” published in ER Publications',
     'Grew out of the genomics internship with Dr. Usha Dave at Labassure Advanced Genomics Institute',
-    'Also submitted to the CREST Award',
+    'Awarded the CREST Gold Award',
   ],
   tags: ['Canavan disease', 'Diagnostics', 'Published'],
 }
@@ -107,25 +110,32 @@ const canavan: Work = {
 const cancerGene: Work = {
   slug: 'cancer-gene',
   when: 'IIT Bombay · BARC',
-  kind: 'Cancer genetics · Research',
-  headline: 'A novel gene in cancer progression',
+  kind: 'Cancer genetics · Bioinformatics',
+  headline: 'PITRM1 — a pan-cancer bioinformatics analysis',
   tone: 'amber',
   stats: [
-    { value: 'OJSS', label: 'Manuscript published' },
-    { value: 'IITB', label: 'Mentored by Dr. Mayuri Bandekar' },
+    { value: '156,010', label: 'Samples from 148,790 patients across 12 pan-cancer studies' },
+    { value: 'OJSS', label: 'Accepted for publication in the Oxford Journal of Student Scholarship' },
   ],
-  skills: 'Cancer biology, research writing',
-  title: 'Research Assistant',
-  org: 'Dr. Mayuri Bandekar, IIT Bombay and BARC',
-  points: ['Investigating a novel gene in cancer progression', 'Manuscript published to OJSS'],
-  tags: ['Cancer biology', 'Published'],
+  skills: 'Cancer genomics datasets, mutation-distribution analysis, Kaplan–Meier survival analysis, research writing',
+  title: 'Independent Researcher, PITRM1 Pan-Cancer Bioinformatics Analysis',
+  org: 'IIT Bombay / BARC · Mentor: Dr. Mayuri Bandekar',
+  meta: 'Manuscript accepted for publication',
+  points: [
+    'Conceptualized and conducted an independent investigation into the cancer-associated role of PITRM1, a mitochondrial protease implicated in protein quality control, using publicly available cancer-genomics datasets',
+    'Analyzed 156,010 samples from 148,790 patients across 12 pan-cancer studies to characterize PITRM1 genomic alterations, including mutations and copy-number changes, and tumor-versus-normal expression patterns',
+    'Conducted mutation-distribution and Kaplan–Meier survival analyses, identifying cancer-specific associations between PITRM1 alterations and poorer overall survival in brain and thyroid cancer cohorts, but no significant association in the overall pan-cancer or lung cancer analyses',
+    'Integrated genomic and clinical findings to investigate the potential relationship between mitochondrial proteostasis and tumor biology, highlighting context-dependent associations and avenues for further functional investigation',
+    'Authored “Exploring the Cancer-Associated Role of PITRM1: A Pan-Cancer Bioinformatics Analysis,” accepted for publication in the Oxford Journal of Student Scholarship (OJSS)',
+  ],
+  tags: ['Cancer genomics', 'Survival analysis', 'Accepted'],
 }
 
 const singleCell: Work = {
   slug: 'single-cell-atlas',
   when: 'June 15 – July 25',
   kind: 'Computational biology · IIT',
-  headline: 'Single-cell reference atlas of healthy cells',
+  headline: 'Defining a healthy liver for an MASLD single-cell atlas',
   tone: 'green',
   stats: [
     { value: '~200', label: 'Scientific papers reviewed and curated into a database' },
@@ -136,10 +146,10 @@ const singleCell: Work = {
   org: 'Dr. Saket Choudhary, IIT',
   meta: 'June 15 – July 25',
   points: [
-    'Sole high-school intern in the research group',
+    "Served as the laboratory's sole high-school intern",
     'Worked independently through the full Seurat workflow in R: QC, normalization, highly variable gene selection, PCA, clustering, UMAP, differential expression and cell-type annotation',
-    'Reviewed about 200 scientific papers and built a structured Excel database to support curation of a healthy reference cell atlas',
-    'Attended research seminars on current genomics work; findings expected to be published',
+    'Reviewed approximately 200 scientific papers and built a structured Excel database to support curation of an MASLD (fatty liver) atlas; the assigned task was to define a “healthy” liver and address inter-study heterogeneity in definitions across global laboratories',
+    'Attended research seminars on current genomics work',
   ],
   tags: ['R', 'Seurat', 'scRNA-seq'],
 }
@@ -160,8 +170,8 @@ const geneTherapy: Work = {
   meta: '6 weeks',
   points: [
     'Theoretical work on the genetic engineering workflow, including PCR, plasmid construction and gel electrophoresis, along with bacterial transformation, transfection, and protein expression and validation',
-    'Covered AAV vectors, capsid engineering and oligodendrocyte-targeted delivery, applied to Canavan disease (ASPA/NAA biology) and its preclinical and clinical gene-therapy development',
-    'Wrote a research report; letter of recommendation received from Dr. Checker',
+    'Examined AAV vectors, capsid engineering and oligodendrocyte-targeted delivery in the context of Canavan disease (ASPA/NAA biology) and preclinical and clinical gene-therapy development',
+    'Wrote a research report on these topics; received a letter of recommendation from Dr. Checker',
   ],
   tags: ['AAV', 'Gene therapy', 'Canavan'],
 }
@@ -180,25 +190,25 @@ export const appliedProjects = [mannpakad]
 export const publications = [
   {
     role: 'Co-author',
-    title: 'Urine-Based Diagnosis of Canavan Disease',
+    title: 'A Student Perspective: N-Acetylaspartate (NAA) Detection by Urine GCMS Analysis in a Rare Genetic Brain Disorder – Canavan Disease',
     venue: 'ER Publications',
     status: 'Published',
-    detail: 'Mentor: Dr. Usha Dave · Oct 2025 – Jan 2026 · Also submitted to the CREST Award',
+    detail: 'Mentor: Dr. Usha Dave · Oct 2025 – Jan 2026 · Awarded CREST Gold Award',
     slug: 'canavan-diagnosis',
   },
   {
     role: 'Author',
-    title: 'Novel-gene study in cancer progression',
-    venue: 'OJSS',
-    status: 'Published',
+    title: 'Exploring the Cancer-Associated Role of PITRM1: A Pan-Cancer Bioinformatics Analysis',
+    venue: 'Oxford Journal of Student Scholarship (OJSS)',
+    status: 'Accepted',
     detail: 'IIT Bombay / BARC · Mentor: Dr. Mayuri Bandekar',
     slug: 'cancer-gene',
   },
   {
     role: 'Contributor',
-    title: 'Single-cell reference atlas project',
+    title: 'MASLD atlas project',
     venue: 'IIT',
-    status: 'Publication done',
+    status: 'Publication forthcoming',
     detail: 'Mentor: Dr. Saket Choudhary',
     slug: 'single-cell-atlas',
   },
@@ -208,11 +218,11 @@ export const training: Role[] = [
   {
     title: 'Genomics Intern',
     org: 'Dr. Usha Dave, Labassure Advanced Genomics Institute',
-    meta: 'Grade 11 · 10 sessions, 45 hours',
+    meta: 'Grade 11',
     points: [
       'Trained in genetic disorder classification, chromatography, GC-MS metabolic testing, pedigree analysis, cancer biology, immunology and sample handling',
-      'Completed laboratory biosafety training, one-to-one forensic testing training, and visits to the ACTREC cancer research laboratory (Kharghar) and biotechnology start-ups in Pune',
-      'Wrote a final internship report; the placement led to the Canavan diagnostics research',
+      'Completed laboratory biosafety training and one-to-one forensic testing training; visited the ACTREC cancer research laboratory (Kharghar) and biotechnology start-ups in Pune',
+      'Wrote a final internship report; this placement led to the Canavan diagnostics research project',
     ],
     tags: ['GC-MS', 'Pedigree analysis', 'Biosafety'],
   },
@@ -221,7 +231,7 @@ export const training: Role[] = [
     org: 'Dr. Hema Purandare, MedGenome / Centre for Genetic Health Care',
     meta: 'June – July 23, 2025 · 20 hours',
     points: [
-      'Shadowed a pioneer of prenatal genetics across 6+ live counseling sessions on how DNA testing informs decisions for families',
+      'Shadowed a pioneer of prenatal genetics across 6+ live counselling sessions on how DNA testing informs decisions for families',
     ],
     tags: ['Prenatal genetics', 'Counseling'],
   },
@@ -231,7 +241,7 @@ export const training: Role[] = [
     meta: 'June 15 – July 25',
     points: [
       'Sole high-school intern in the research group; worked through the full Seurat workflow in R, from QC to cell-type annotation',
-      'Reviewed about 200 scientific papers and built a structured database to support curation of a healthy reference cell atlas',
+      'Reviewed approximately 200 scientific papers and built a structured database to support curation of an MASLD (fatty liver) atlas, defining a “healthy” liver across inter-study differences',
     ],
     tags: ['R', 'Seurat', 'scRNA-seq'],
   },
@@ -244,7 +254,6 @@ export const honors = {
     { title: 'Immerse Education Essay Competition', year: '2026', note: 'Honours List' },
     { title: 'DELE Spanish A2', year: 'Grade 11', note: 'Scored 93%' },
     { title: 'Dr. Homi Bhabha Balvaidyanik Competition', year: '2023–24', note: 'Participant' },
-    { title: 'Math Olympiad', year: '2022–23', note: 'Participant' },
   ],
   wscGlobal: [
     { award: 'Gold', event: 'Overall Challenge', result: '6th of 500 participants' },
@@ -263,8 +272,7 @@ export const honors = {
     'Gold medals: Writer, Challenge Art & Music, Challenge History, Challenge Special Area; silver medals: Debater (19th), Challenge Social Studies (5th)',
   ],
   school: [
-    'Academic Excellence, 2024–2026 (subjects listed under Education)',
-    'General Proficiency, Grades 9–11',
+    'Academic Excellence, 2024–2026 (subjects listed under Education); General Proficiency, Grades 9–11',
     'Attribute Awards, 2023 (Grade 9) and 2024, for empathy, diligence, resilience, honesty, respect and responsibility',
     'Muskaan Foundation Award for Social Service, Grade 11',
   ],
@@ -292,7 +300,7 @@ export const activities: (Role & { category: string })[] = [
     org: 'ABWA School Newsletter',
     meta: 'Grade 10 – present',
     points: [
-      "Published 20+ articles; started the newsletter's STEM column on current science, research by students and ethics in STEM",
+      "Published 20+ articles; started the newsletter's STEM column on current science, student research and ethics in STEM",
       "Competed in the Derek O'Brien parliamentary writing contest at national level",
     ],
   },
@@ -306,7 +314,7 @@ export const activities: (Role & { category: string })[] = [
     category: 'Arts & Sport',
     title: 'Vocalist',
     org: 'Trinity College London',
-    points: ['Distinction in Grades 1 and 2; solo and band performances for 3+ years, including a 150-person concert'],
+    points: ['Earned Distinction in Grades 1 and 2; performed solo and with bands for 3+ years, including a 150-person concert'],
   },
   {
     category: 'Arts & Sport',
@@ -326,7 +334,7 @@ export const activities: (Role & { category: string })[] = [
 
 export const education = {
   school: 'Aditya Birla World Academy (ABWA), Mumbai',
-  meta: 'Grades 9–11 · graduating 2027',
+  meta: 'Grades 9–12 · expected graduation 2027',
   grades: [
     {
       grade: 'Grade 9',
@@ -378,6 +386,7 @@ export const skills = [
       'Prenatal genetics',
       'Cancer genetics',
       'Pedigree analysis',
+      'Single-cell RNA sequencing',
     ],
   },
   {
