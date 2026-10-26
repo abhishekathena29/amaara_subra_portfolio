@@ -18,9 +18,10 @@ function Hero() {
             Diseases Visible.
           </h1>
           <p className="lede">
-            Hi, I'm {profile.firstName}—a high-school researcher in computational biology and human genetics at {profile.school}.
-            I've co-authored a published paper, held research placements at IIT Bombay and IIT, and I'm building an independent
-            genomics platform. Currently based in {profile.city}, India.
+            Hi, I'm {profile.firstName} - a high school researcher in human genetics, gene therapy, and precision medicine, with
+            independent and co-authored publications, research placements at IIT Bombay and other research laboratories, and the
+            creator of an integrated leukodystrophy knowledge atlas connecting genetic evidence, disease mechanisms, and therapeutic
+            research.
           </p>
           <div className="hero-actions">
             <Link to="/research" className="btn btn-dark">

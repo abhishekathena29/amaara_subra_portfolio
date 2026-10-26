@@ -5,7 +5,7 @@ export const profile = {
   city: 'Mumbai',
   graduating: '2027',
   tagline:
-    'High-school researcher in computational biology and human genetics, with a published co-authored paper, research placements at IIT Bombay and IIT, and an independent genomics platform in development.',
+    'High school researcher in human genetics, gene therapy and precision medicine, with independent and co-authored publications, research placements at IIT Bombay and other research laboratories, and the creator of an integrated leukodystrophy knowledge atlas connecting genetic evidence, disease mechanisms and therapeutic research.',
   photo: '/photos/portrait.jpg',
   resumePdf: '/Academic_Resume.pdf',
   languages: 'English; Spanish (DELE A2, 93%)',
@@ -33,6 +33,8 @@ export type Work = Role & {
   tone: Tone
   stats: { value: string; label: string }[]
   skills: string
+  /** External site for the work, shown on its detail page */
+  link?: { href: string; label: string }
 }
 
 const genemap: Work = {
@@ -42,17 +44,18 @@ const genemap: Work = {
   headline: 'GeneMap — an interactive digital atlas of genetic leukodystrophies',
   tone: 'blue',
   stats: [
-    { value: '8', label: 'Disorders covered with literature-based dossiers' },
+    { value: '35', label: 'Leukodystrophies covered with literature-based dossiers' },
     { value: '1', label: 'Searchable platform for genetic, diagnostic and therapeutic data' },
   ],
   skills: 'Literature review, biomedical databases, evidence classification, platform design',
+  link: { href: 'https://thegenemap.com', label: 'thegenemap.com' },
   title: 'Founder & Lead Researcher, GeneMap',
   org: 'Independent capstone',
   meta: 'Jan 2026 – present',
   mentors: 'Louis (Oxford); Dr. Mayuri Bandekar (IIT Bombay)',
   points: [
     'Building an interactive digital atlas of genetic leukodystrophies that consolidates fragmented genetic, molecular, diagnostic, biomarker and therapeutic data into one searchable platform',
-    'Authored literature-based dossiers on eight disorders: Canavan, Krabbe, metachromatic leukodystrophy, X-linked adrenoleukodystrophy, Pelizaeus–Merzbacher, vanishing white matter, Alexander, and POLR3-related leukodystrophy',
+    'Authored literature-based dossiers on 35 leukodystrophies, including Canavan, Krabbe, metachromatic leukodystrophy, X-linked adrenoleukodystrophy, Pelizaeus–Merzbacher, vanishing white matter, Alexander, and POLR3-related leukodystrophy',
     'Each dossier links primary literature, biomedical databases, clinical-trial records, standardized identifiers and evidence classifications across disease biology, genotype–phenotype relationships, biomarkers, diagnostics and therapeutic pipelines',
   ],
   tags: ['Leukodystrophies', 'Data curation', 'Platform'],
@@ -125,17 +128,17 @@ const singleCell: Work = {
   headline: 'Single-cell reference atlas of healthy cells',
   tone: 'green',
   stats: [
-    { value: '~300', label: 'Scientific papers reviewed and curated into a database' },
+    { value: '~200', label: 'Scientific papers reviewed and curated into a database' },
     { value: 'R', label: 'Full Seurat workflow from QC to cell-type annotation' },
   ],
   skills: 'R, Seurat, PCA, clustering, UMAP, differential expression',
   title: 'Research Intern, Single-Cell Genomics & Computational Biology',
-  org: 'Saket Chaudhary, IIT',
+  org: 'Dr. Saket Choudhary, IIT',
   meta: 'June 15 – July 25',
   points: [
     'Sole high-school intern in the research group',
     'Worked independently through the full Seurat workflow in R: QC, normalization, highly variable gene selection, PCA, clustering, UMAP, differential expression and cell-type annotation',
-    'Reviewed about 300 scientific papers and built a structured Excel database to support curation of a healthy reference cell atlas',
+    'Reviewed about 200 scientific papers and built a structured Excel database to support curation of a healthy reference cell atlas',
     'Attended research seminars on current genomics work; findings expected to be published',
   ],
   tags: ['R', 'Seurat', 'scRNA-seq'],
@@ -143,7 +146,7 @@ const singleCell: Work = {
 
 const geneTherapy: Work = {
   slug: 'gene-therapy',
-  when: '4 weeks',
+  when: '6 weeks',
   kind: 'Gene therapy · BARC Hospital',
   headline: 'AAV gene therapy for Canavan disease',
   tone: 'violet',
@@ -151,16 +154,16 @@ const geneTherapy: Work = {
     { value: 'AAV', label: 'Vectors, capsid engineering and targeted delivery' },
     { value: 'LOR', label: 'Letter of recommendation from Dr. Rahul Checker' },
   ],
-  skills: 'Plasmid design, PCR, gel electrophoresis, transfection, protein validation',
+  skills: 'Theoretical genetic engineering workflow: PCR, plasmid construction, gel electrophoresis; AAV vector biology',
   title: 'Research Intern, Gene Therapy',
   org: 'BARC Hospital, under Dr. Rahul Checker',
-  meta: '4 weeks',
+  meta: '6 weeks',
   points: [
-    'Studied plasmid design, bacterial transformation, PCR and gel electrophoresis, transfection, and protein expression and validation',
+    'Theoretical work on the genetic engineering workflow, including PCR, plasmid construction and gel electrophoresis, along with bacterial transformation, transfection, and protein expression and validation',
     'Covered AAV vectors, capsid engineering and oligodendrocyte-targeted delivery, applied to Canavan disease (ASPA/NAA biology) and its preclinical and clinical gene-therapy development',
     'Wrote a research report; letter of recommendation received from Dr. Checker',
   ],
-  tags: ['AAV', 'Wet lab', 'Canavan'],
+  tags: ['AAV', 'Gene therapy', 'Canavan'],
 }
 
 export const works = [genemap, mannpakad, canavan, cancerGene, singleCell, geneTherapy]
@@ -196,7 +199,7 @@ export const publications = [
     title: 'Single-cell reference atlas project',
     venue: 'IIT',
     status: 'Publication done',
-    detail: 'Mentor: Saket Chaudhary',
+    detail: 'Mentor: Dr. Saket Choudhary',
     slug: 'single-cell-atlas',
   },
 ]
@@ -221,6 +224,16 @@ export const training: Role[] = [
       'Shadowed a pioneer of prenatal genetics across 6+ live counseling sessions on how DNA testing informs decisions for families',
     ],
     tags: ['Prenatal genetics', 'Counseling'],
+  },
+  {
+    title: 'Research Intern, Single-Cell Genomics & Computational Biology',
+    org: 'Dr. Saket Choudhary, IIT',
+    meta: 'June 15 – July 25',
+    points: [
+      'Sole high-school intern in the research group; worked through the full Seurat workflow in R, from QC to cell-type annotation',
+      'Reviewed about 200 scientific papers and built a structured database to support curation of a healthy reference cell atlas',
+    ],
+    tags: ['R', 'Seurat', 'scRNA-seq'],
   },
 ]
 
@@ -263,8 +276,8 @@ export const activities: (Role & { category: string })[] = [
     title: 'Founder & Program Lead, Animal-Assisted Therapy',
     org: 'Yes I Can Foundation × Animal Angels Foundation India',
     points: [
-      'Brokered a first-of-its-kind NGO partnership bringing therapy animals to isolated elderly residents',
-      "Certified as an animal-assisted therapist; ran the program to support residents' mental wellbeing",
+      'Brokered a first-of-its-kind NGO partnership bringing animals to interact with and provide comfort to isolated elderly residents',
+      "Ran the program to support residents' mental wellbeing",
     ],
   },
   {
@@ -315,14 +328,23 @@ export const education = {
   school: 'Aditya Birla World Academy (ABWA), Mumbai',
   meta: 'Grades 9–11 · graduating 2027',
   grades: [
-    { grade: 'Grade 9', subjects: ['English (FLE)', 'Computer Science', 'Biology', 'Spanish'] },
+    {
+      grade: 'Grade 9',
+      subjects: ['English', 'Computer Science', 'Economics', 'Spanish', 'Mathematics', 'Global Perspectives', 'Biology', 'Chemistry', 'Physics'],
+      awarded: ['English (FLE)', 'Computer Science', 'Biology', 'Spanish'],
+    },
     {
       grade: 'Grade 10 (International)',
-      subjects: ['Mathematics', 'Spanish', 'Computer Science', 'Economics', 'Biology', 'Physics', 'Chemistry', 'Global Perspectives'],
+      subjects: ['English', 'Computer Science', 'Economics', 'Spanish', 'Mathematics', 'Global Perspectives', 'Biology', 'Chemistry', 'Physics'],
+      awarded: ['Mathematics', 'Spanish', 'Computer Science', 'Economics', 'Biology', 'Physics', 'Chemistry', 'Global Perspectives'],
     },
-    { grade: 'Grade 11', subjects: ['English General Paper (EGP)', 'Biology', 'Physics', 'Mathematics'] },
+    {
+      grade: 'Grade 11',
+      subjects: ['English', 'Biology', 'Chemistry', 'Physics', 'Mathematics'],
+      awarded: ['English General Paper (EGP)', 'Biology', 'Physics', 'Mathematics'],
+    },
   ],
-  note: 'Academic Excellence awards in the subjects above, 2024–2026; General Proficiency, Grades 9–11',
+  note: 'Academic Excellence awards, 2024–2026; General Proficiency, Grades 9–11',
 }
 
 export const skills = [
@@ -339,8 +361,8 @@ export const skills = [
     label: 'Laboratory',
     lead: 'Laboratory',
     accent: 'Exposure',
-    blurb: 'Hands-on bench training across molecular biology and metabolic diagnostics.',
-    items: ['PCR', 'Gel electrophoresis', 'Plasmid construction', 'GC-MS', 'Chromatography', 'Sample preparation'],
+    blurb: 'Hands-on bench training in metabolic diagnostics and laboratory practice.',
+    items: ['GC-MS metabolic testing', 'Chromatography', 'Sample preparation', 'Laboratory biosafety'],
   },
   {
     key: 'domain',
@@ -348,7 +370,15 @@ export const skills = [
     lead: 'Domain',
     accent: 'Knowledge',
     blurb: 'Rare neurological disease, gene therapy and clinical genetics.',
-    items: ['Leukodystrophies', 'Canavan disease', 'AAV gene therapy', 'Prenatal genetics', 'Cancer genetics', 'Pedigree analysis'],
+    items: [
+      'Leukodystrophies',
+      'Canavan disease',
+      'AAV gene therapy',
+      'Genetic engineering workflow (theory): PCR, plasmid construction, gel electrophoresis',
+      'Prenatal genetics',
+      'Cancer genetics',
+      'Pedigree analysis',
+    ],
   },
   {
     key: 'courses',

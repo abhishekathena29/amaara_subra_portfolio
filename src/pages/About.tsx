@@ -95,8 +95,17 @@ export default function About() {
           {education.grades.map((g) => (
             <article key={g.grade} className="grade">
               <h3 className="h3">{g.grade}</h3>
+              <p className="grade-label">Subjects</p>
               <div className="chips">
                 {g.subjects.map((s) => (
+                  <span key={s} className="chip">
+                    {s}
+                  </span>
+                ))}
+              </div>
+              <p className="grade-label">Awarded academic excellence in</p>
+              <div className="chips">
+                {g.awarded.map((s) => (
                   <span key={s} className="chip">
                     {s}
                   </span>

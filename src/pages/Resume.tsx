@@ -68,7 +68,14 @@ export default function Resume() {
           <p className="cv-line">
             <strong>{education.school}</strong> · {education.meta}
           </p>
-          <Bullets items={[...education.grades.map((g) => `${g.grade}: ${g.subjects.join(', ')}`), education.note]} />
+          <Bullets
+            items={[
+              ...education.grades.map(
+                (g) => `${g.grade}: ${g.subjects.join(', ')}. Awarded academic excellence in ${g.awarded.join(', ')}`,
+              ),
+              education.note,
+            ]}
+          />
         </Section>
 
         <Section title="Research Experience">

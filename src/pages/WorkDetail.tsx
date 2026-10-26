@@ -35,6 +35,11 @@ export default function WorkDetail() {
               <span>Mentors</span> {work.mentors}
             </p>
           )}
+          {work.link && (
+            <a className="btn btn-dark btn-sm work-link" href={work.link.href} target="_blank" rel="noopener noreferrer">
+              Visit {work.link.label} <ArrowRight width={15} height={15} />
+            </a>
+          )}
         </div>
       </Frame>
       <Divider />
